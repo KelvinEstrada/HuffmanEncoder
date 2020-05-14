@@ -25,8 +25,8 @@ public class HuffmanCode {
 
 	/**
 	 * Reads input file with UTF-8 encoding format only. 
-	 * @param File	Input file.
-	 * @return Input file represented as a string.
+	 * @param inputFile	Input file.
+	 * @return File represented as a string.
 	 * @throws Exception 
 	 */
 	public String loadData(FileReader inputFile) throws Exception {
@@ -42,7 +42,7 @@ public class HuffmanCode {
 
 
 	/** Method computeFD computes the frequency distribution of parameter String an stores it in a Map. 
-	 *  @param String	Input text string. 
+	 *  @param inputText Input text string. 
 	 *  @return Map containing the frequency distribution of the parameter string. 
 	 */
 	public Map<String, Integer> computeFD(String inputText){
