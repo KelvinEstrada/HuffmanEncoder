@@ -1,4 +1,4 @@
-package ciic4020.project2.sortedlist;
+package ciic4020.project3.sortedlist;
 
 public interface SortedList<E extends Comparable<? super E>> {
 

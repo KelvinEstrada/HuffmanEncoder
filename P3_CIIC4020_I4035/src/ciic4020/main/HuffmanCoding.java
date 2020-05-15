@@ -7,8 +7,8 @@ import ciic4020.hashtable.HashTableSC;
 import ciic4020.hashtable.SimpleHashFunction;
 import ciic4020.list.List;
 import ciic4020.map.Map;
-import ciic4020.project2.sortedlist.SortedArrayList;
-import ciic4020.project2.sortedlist.SortedList;
+import ciic4020.project3.sortedlist.SortedArrayList;
+import ciic4020.project3.sortedlist.SortedList;
 
 
 /**
@@ -21,7 +21,7 @@ import ciic4020.project2.sortedlist.SortedList;
  * @author KELVIN O. ESTRADA SOTO
  *
  */
-public class HuffmanCode {
+public class HuffmanCoding {
 
 	/**
 	 * Reads input file with UTF-8 encoding format only. 
@@ -113,7 +113,7 @@ public class HuffmanCode {
 		BTNode<Integer, String> result = new BTNode<Integer, String>();
 		//Make sure if the are two least frequent elements in the list.
 		if(sl.size() >= 3) {
-		//Resolve the tie ONLY for the last two elements in the list.
+			//Resolve the tie ONLY for the last two elements in the list.
 			String p1 = sl.get(0).getValue();
 			String p2 = sl.get(1).getValue();
 			if(p1.compareTo(p2) < 0) {
@@ -149,7 +149,7 @@ public class HuffmanCode {
 		huffmanCodeHelper(root, "", map);
 		return map;
 	}
-	
+
 	/**
 	 * Huffman code method helper that recursively assigns a 0 to left child and 1 to right child when traversing the Binary Tree.
 	 * @param node String, Map Root of the tree, an empty string to assign 0 or 1 and a Map to map each huffman code to the symbol. 
@@ -230,25 +230,25 @@ public class HuffmanCode {
 			System.out.println();
 		}
 
-				System.out.println();
-				System.out.println("Original string:");
-				System.out.println(inputString);
-				System.out.println("Encoded string:");
-				System.out.println(outputString);
-				System.out.println();
-				int bytesSize = inputString.getBytes().length;
-				int encodedBytes =  0;
-				for(int i = 0; i < outputString.length(); i++) {
-					if(i % 8 == 0) {
-						encodedBytes++;
-					}
-				}
-				System.out.println("The original string requires " + bytesSize + " bytes.");
-				System.out.println("The encoded string requires " + encodedBytes + " bytes.");
-				double numerator = Math.abs(bytesSize - encodedBytes);
-				double differencePercent = ((numerator)/(bytesSize)) * 100;
-				System.out.printf("Difference in space required is %.2f", differencePercent);
-				System.out.println("%");
+		System.out.println();
+		System.out.println("Original string:");
+		System.out.println(inputString);
+		System.out.println("Encoded string:");
+		System.out.println(outputString);
+		System.out.println();
+		int bytesSize = inputString.getBytes().length;
+		int encodedBytes =  0;
+		for(int i = 0; i < outputString.length(); i++) {
+			if(i % 8 == 0) {
+				encodedBytes++;
+			}
+		}
+		System.out.println("The original string requires " + bytesSize + " bytes.");
+		System.out.println("The encoded string requires " + encodedBytes + " bytes.");
+		double numerator = Math.abs(bytesSize - encodedBytes);
+		double differencePercent = ((numerator)/(bytesSize)) * 100;
+		System.out.printf("Difference in space required is %.2f", differencePercent);
+		System.out.println("%");
 
 	}
 

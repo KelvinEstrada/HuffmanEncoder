@@ -1,4 +1,4 @@
-package ciic4020.project2.sortedlist;
+package ciic4020.project3.sortedlist;
 
 /**
  * @author Juan O. López
